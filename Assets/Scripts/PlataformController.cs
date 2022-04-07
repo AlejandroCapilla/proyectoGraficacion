@@ -14,14 +14,6 @@ public class PlataformController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(0,0,-12f * Time.deltaTime);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "plataform_destroyer")
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }

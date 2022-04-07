@@ -4,7 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - plataformPrefab: {fileID: 3787517956760027459, guid: f05ed5431277347c68e17a057d621592, type: 3}
+  - plataformPrefab: {fileID: 1931448768218249472, guid: 65464b8000faa4e07a55e9266cc5b789, type: 3}
+  - sectionPrefab: {fileID: 7063189594391190501, guid: a322e08d6281d4220a95beb8a70d2f8c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
