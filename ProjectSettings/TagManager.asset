@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - plataform
+  - plataform_destroyer
+  - player
   layers:
   - Default
   - TransparentFX
