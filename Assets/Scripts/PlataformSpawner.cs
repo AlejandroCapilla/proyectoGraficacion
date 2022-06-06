@@ -7,7 +7,8 @@ using Random = UnityEngine.Random;
 public class PlataformSpawner : MonoBehaviour
 {
     //public GameObject sectionPrefab;
-    public GameObject sectionPrefab;
+    public GameObject sectionPref;
+    public GameObject world;
 
     private List<int> rotationList;
     // Start is called before the first frame update
@@ -37,6 +38,6 @@ public class PlataformSpawner : MonoBehaviour
     {
         Vector3 position = new Vector3(0, 0, pos*16);
         Quaternion rotation = new Quaternion();
-        Instantiate(sectionPrefab,position,rotation);
+        Instantiate(sectionPref, position, rotation).transform.SetParent(world.transform,worldPositionStays:false);
     }
 }
