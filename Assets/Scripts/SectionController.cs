@@ -29,7 +29,7 @@ public class SectionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(0,0,-24f * Time.deltaTime);
+        gameObject.transform.Translate(0,0,-30f * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
