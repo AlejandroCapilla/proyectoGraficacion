@@ -28,17 +28,31 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Physics.AddForce(new Vector3(0,jumpForce * Time.deltaTime,0), ForceMode.Force);
-            canJump = true;
+            //canJump = true;
         }
         
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && canJump)
         {
+            canJump = false;
+            Physics.AddForce(new Vector3(0,jumpImpulse,0), ForceMode.Impulse);
             cube.transform.Rotate(0,0,36);
         }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
+            Physics.AddForce(new Vector3(0,jumpForce * Time.deltaTime,0), ForceMode.Force);
+            //canJump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && canJump)
+        {
+            canJump = false;
+            Physics.AddForce(new Vector3(0,jumpImpulse,0), ForceMode.Impulse);
             cube.transform.Rotate(0,0,-36);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Physics.AddForce(new Vector3(0,jumpForce * Time.deltaTime,0), ForceMode.Force);
+            //canJump = true;
         }
     }
 
